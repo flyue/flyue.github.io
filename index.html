@@ -5,5 +5,18 @@
   </head>
 <body bgcolor="#FAEBD7">
   <div>just a try!</div>
+  简单计数器：<span id="countspan"></span>
+<a href="#" onclick="countNumber();">点击</a>
+<script type="text/javascript">
+if(!localStorage.countAll){
+                                                                                                
+    localStorage.countAll = 0;
+}
+document.getElementById('countspan').innerHTML = localStorage.countAll;
+function countNumber(){
+    localStorage.countAll++;
+    document.getElementById('countspan').innerHTML = localStorage.countAll;
+}
+</script>
 </body>
 </html>
